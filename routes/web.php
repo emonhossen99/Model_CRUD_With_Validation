@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ViewController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductsController;
@@ -12,3 +13,4 @@ Route::get('/',function(){
 Route::resource('/brands',BrandController::class);
 Route::resource('/category',CategoryController::class);
 Route::resource('/products',ProductsController::class);
+Route::get('/view/{view_id}/',[ViewController::class,'viewGet']);

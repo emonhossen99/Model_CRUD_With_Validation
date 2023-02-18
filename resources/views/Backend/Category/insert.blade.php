@@ -1,6 +1,8 @@
-@extends('Master.Master')
+<x-Master>
 
-@section('content')
+    <x-slot name="title">
+        Model --Category __Insert
+    </x-slot>
 {{-- insert header  --}}
     <h1 class="text-center text-primary mt-5">This is New Category Add Page</h1>
     <div class="text-end">
@@ -24,7 +26,7 @@
                 @enderror
             </div>
             <div class="col-md-8">
-                <select class="form-select @error('category_name') is-invalid @enderror" name="status" aria-label="Default select example">
+                <select class="form-select @error('status') is-invalid @enderror" name="status" aria-label="Default select example">
                     <option value="">Status</option>
                     <option value="0">Pending</option>
                     <option value="1">Published</option>
@@ -35,8 +37,8 @@
             </div>
 
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Add Now</button>
+                <button type="submit" class="btn btn-primary">Add Category</button>
             </div>
         </form>
     </div>
-@endsection
+</x-Master>

@@ -1,7 +1,8 @@
-@extends('Master.Master')
+<x-Master>
 
-@section('content')
-
+    <x-slot name="title">
+        Model --Category __Update
+    </x-slot>
 
 {{-- insert header  --}}
 <h1 class="text-center text-primary mt-5">This is New Category Update Page</h1>
@@ -43,4 +44,4 @@
     </form>
 </div>
 
-@endsection
+</x-Master>

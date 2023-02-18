@@ -1,10 +1,18 @@
-@extends('Master.Master')
+<x-Master>
 
-@section('content')
+    <x-slot name="title">
+        Model --Category
+    </x-slot>
+
     {{-- insert success and error message  --}}
     @include('Include.Alert')
 
     <a href="{{ url('category/create') }}" class="btn btn-primary outline mt-5 mb-5">Add Now</a>
+
+    <x-Component>
+        THis Is Example In Category Component
+    </x-Component>
+
     <table class="table">
         <thead>
             <tr>
@@ -48,4 +56,4 @@
         </tbody>
     </table>
     @include('Include.ConfirmAlert')
-@endsection
+</x-Master>

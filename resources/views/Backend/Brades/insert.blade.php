@@ -1,6 +1,7 @@
-@extends('Master.Master')
-
-@section('content')
+<x-Master>
+    <x-slot name="title">
+        Model --Brand __Insert
+    </x-slot>
 {{-- insert header  --}}
     <h1 class="text-center text-primary mt-5">This is New Brands Add Page</h1>
     <div class="text-end">
@@ -35,8 +36,8 @@
             </div>
 
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Add Now</button>
+                <button type="submit" class="btn btn-primary">Add Brand</button>
             </div>
         </form>
     </div>
-@endsection
+</x-Master>

@@ -1,8 +1,8 @@
-@extends('Master.Master')
+<x-Master>
 
-@section('content')
-
-
+    <x-slot name="title">
+        Model --Brand __Update
+    </x-slot>
 {{-- insert header  --}}
 <h1 class="text-center text-primary mt-5">This is New Brand Update Page</h1>
 <div class="text-end">
@@ -42,5 +42,4 @@
         </div>
     </form>
 </div>
-
-@endsection
+</x-Master>
