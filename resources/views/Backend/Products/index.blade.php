@@ -18,7 +18,11 @@
 <x-Alart :message="$name" class='fw-bolder' type='success'>
 </x-Alart>
 
-
+@php
+    $alerts = 'alert alert-warning'
+@endphp
+<x-product :class="$alerts" type="fw-bold">
+</x-product>
 <table class="table">
     <thead>
       <tr>
@@ -41,7 +45,7 @@
             <th>{{ $loop->iteration }}</th>
             <td>{{ $data->brand->brand_name}}</td>
             <td>{{ $data->category->category_name}}</td>
-            <td>{{ $data->product_name}}</td>
+            <td>{{ lowercase($data->product_name)}}</td>
             <td>{{ $data->product_slug}}</td>
             <td>{{ $data->product_code}}</td>
             <td>{{ $data->qnt}}</td>

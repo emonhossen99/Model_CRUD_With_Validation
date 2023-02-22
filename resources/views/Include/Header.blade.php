@@ -18,6 +18,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/products">Products</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" class="text-danger" href="">{{ trans_choice('language.Cart',9) }}</a>
+          </li>
 
       </div>
     </div>

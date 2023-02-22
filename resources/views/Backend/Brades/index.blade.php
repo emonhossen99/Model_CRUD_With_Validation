@@ -26,7 +26,17 @@
         This Is Example In Brands Component
     </x-Component>
 
+    @php
+    $name = 'alert alert-danger'
+  @endphp
 
+    @php
+ $message = ' Hello This is a Brands'
+  @endphp
+
+    <x-Brand :message="$message" :myclass="$name" type='fw-bold'>
+
+    </x-Brand>
     <table class="table">
         <thead>
             <tr>
@@ -69,6 +79,6 @@
             @endforelse
         </tbody>
     </table>
-    {{ $brandsData->onEachSide(2)->links()}}
+    {{-- {{ $brandsData->onEachSide(2)->links()}} --}}
     @include('Include.ConfirmAlert')
 </x-Master>

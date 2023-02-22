@@ -19,6 +19,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
+        return product_by_id(6);
         $productData = ProductModel::with('brand', 'category')->latest('id')->get();
         return view('Backend.Products.index', ['productData' => $productData]);
     }

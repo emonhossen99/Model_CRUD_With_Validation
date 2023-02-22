@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\BrandRequest;
 use App\Models\BrandsModel;
 use Illuminate\Http\Request;
+use App\Http\Requests\BrandRequest;
+use Illuminate\Support\Facades\Cache;
 
 class BrandController extends Controller
 {
@@ -15,7 +16,7 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $brands = BrandsModel::paginate(15);
+        $brands = BrandsModel::get_brands();
         return view('Backend.Brades.index',['brandsData'=> $brands]);
     }
 
