@@ -7,7 +7,7 @@ use App\Http\Controllers\ViewController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductsController;
-
+use App\Http\Controllers\QueueController;
 
 // Route::get('/{locale}',function($locale){
 //     App::setLocale($locale);
@@ -17,6 +17,9 @@ Route::resource('/brands',BrandController::class);
 Route::resource('/category',CategoryController::class);
 Route::resource('/products',ProductsController::class);
 Route::get('/view/{view_id}/',[ViewController::class,'viewGet']);
+
+
+Route::resource('/queue',QueueController::class,);
 
 
 // Route::get('/',function (){

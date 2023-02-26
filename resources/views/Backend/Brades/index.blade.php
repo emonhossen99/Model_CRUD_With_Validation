@@ -30,13 +30,6 @@
     $name = 'alert alert-danger'
   @endphp
 
-    @php
- $message = ' Hello This is a Brands'
-  @endphp
-
-    <x-Brand :message="$message" :myclass="$name" type='fw-bold'>
-
-    </x-Brand>
     <table class="table">
         <thead>
             <tr>

@@ -83,5 +83,5 @@
 
     </tbody>
   </table>
-  @include('Include.ConfirmAlert');
+  @include('Include.ConfirmAlert')
 </x-Master>

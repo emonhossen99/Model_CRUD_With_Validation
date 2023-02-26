@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\CategoryEvent;
 use App\Http\Requests\CategoryRequest;
 use App\Models\CategorysModel;
 use Illuminate\Http\Request;

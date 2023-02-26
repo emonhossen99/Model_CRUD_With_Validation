@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ProductEvent;
 use App\Models\BrandsModel;
 use Illuminate\Support\Str;
 use App\Models\ProductModel;
@@ -19,7 +20,6 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return product_by_id(6);
         $productData = ProductModel::with('brand', 'category')->latest('id')->get();
         return view('Backend.Products.index', ['productData' => $productData]);
     }
@@ -46,7 +46,6 @@ class ProductsController extends Controller
      */
     public function store(ProductRequest $req)
     {
-
         $productTable = new ProductModel();
         $productTable->brand_id = $req->brand;
         $productTable->category_id = $req->category;
@@ -62,7 +61,6 @@ class ProductsController extends Controller
         if($req->hasFile('future_image')){
         $productTable->image = $this->file_upload($req->file('future_image'),'uploads/productsImages/');
         }
-
         if ($productTable->save()) {
             return redirect('/products')->with('Success', 'Data Insert Successfully Form Products Table');
         } else {

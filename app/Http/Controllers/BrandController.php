@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\BrandEvent;
+use App\Events\CategoryEvent;
 use App\Models\BrandsModel;
 use Illuminate\Http\Request;
 use App\Http\Requests\BrandRequest;
@@ -38,6 +40,7 @@ class BrandController extends Controller
      */
     public function store(BrandRequest $req)
     {
+        $brandSend = $req;
         $brands = new BrandsModel();
         $brands ->brand_name = $req->brand_name;
         $brands ->status = $req->status;
